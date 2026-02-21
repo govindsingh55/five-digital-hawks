@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin or sensitive paths if they existed
+Disallow: /_sveltekit/
+Disallow: /_app/
+
+# Host and Sitemap
+Sitemap: https://fivedigitalhawks.com/sitemap.xml
