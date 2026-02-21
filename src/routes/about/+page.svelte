@@ -80,7 +80,7 @@
 
     <div class="container mx-auto px-4 max-w-5xl relative z-10 text-center">
         <h1
-            class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 animate-[fade-in-up_0.8s_ease-out]"
+            class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 animate-[fade-in-up_0.8s_ease-out]"
         >
             About <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
@@ -88,7 +88,7 @@
             >
         </h1>
         <p
-            class="text-xl md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
+            class="text-lg md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
         >
             Since 2011, we've been on a mission to make marketing measurable,
             scalable, and wildly profitable for brands that refuse to settle.
@@ -97,30 +97,34 @@
 </section>
 
 <!-- Brand Story -->
-<section class="py-24 bg-base-100">
+<section class="py-16 md:py-24 bg-base-100">
     <div class="container mx-auto px-4 max-w-6xl">
-        <div class="flex flex-col lg:flex-row gap-16 items-center">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             <div class="lg:w-1/2 reveal-left" use:inview>
                 <h2
-                    class="text-brand-accent font-semibold tracking-wide uppercase mb-3"
+                    class="text-brand-accent font-semibold tracking-wide uppercase mb-3 text-sm md:text-base"
                 >
                     Our Story
                 </h2>
                 <h3
-                    class="text-4xl font-bold text-base-content mb-6 leading-tight"
+                    class="text-2xl sm:text-3xl md:text-4xl font-bold text-base-content mb-6 leading-tight"
                 >
                     From One Idea to a <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-highlight"
                         >Full-Service Powerhouse</span
                     >
                 </h3>
-                <p class="text-lg text-base-content/70 leading-relaxed mb-6">
+                <p
+                    class="text-base sm:text-lg text-base-content/70 leading-relaxed mb-6"
+                >
                     Five Digital Hawks started with a simple belief: marketing
                     should no longer be a guessing game. Our founder, Avinash
                     Singh, spent years watching businesses pour money into
                     campaigns with no measurable ROI.
                 </p>
-                <p class="text-lg text-base-content/70 leading-relaxed">
+                <p
+                    class="text-base sm:text-lg text-base-content/70 leading-relaxed"
+                >
                     Today, we've grown into a team of 30+ marketing veterans,
                     data scientists, and creative experts who have deployed over
                     500 campaigns across 20+ industries — all while maintaining

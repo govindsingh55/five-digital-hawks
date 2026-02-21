@@ -113,10 +113,12 @@
                     ]}"
                     use:inview
                 >
-                    <div class="card-body">
+                    <div
+                        class="card-body items-center text-center md:items-start md:text-left"
+                    >
                         <!-- Icon -->
                         <div
-                            class="w-14 h-14 rounded-2xl bg-brand-primary/5 text-brand-primary flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-110 transition-all duration-300"
+                            class="w-14 h-14 rounded-2xl bg-brand-primary/5 text-brand-primary flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 mx-auto md:mx-0"
                         >
                             <service.icon size={28} strokeWidth={1.5} />
                         </div>
@@ -128,7 +130,7 @@
 
                         <div class="card-actions mt-6">
                             <button
-                                class="btn btn-ghost btn-sm text-brand-accent pl-0 hover:bg-transparent hover:text-brand-primary group-hover:translate-x-1 transition-all"
+                                class="btn btn-ghost btn-sm text-brand-accent p-0 hover:bg-transparent hover:text-brand-primary group-hover:translate-x-1 transition-all"
                             >
                                 Learn more &rarr;
                             </button>

@@ -77,16 +77,16 @@
                         {#each testimonials as t, i}
                             <div
                                 id="testimonial-slide-{i}"
-                                class="carousel-item relative w-full flex flex-col items-center text-center px-6 py-12 md:px-20 md:py-20"
+                                class="carousel-item relative w-full flex flex-col items-center text-center px-4 py-10 md:px-20 md:py-20"
                             >
                                 <!-- Rating -->
                                 <div
-                                    class="flex gap-1 text-brand-highlight mb-8"
+                                    class="flex gap-1 text-brand-highlight mb-6 md:mb-8"
                                 >
                                     {#each Array(5) as _, si}
                                         <Star
                                             fill="currentColor"
-                                            size={20}
+                                            size={18}
                                             class="animate-[star-pop_0.4s_ease_both]"
                                             style="animation-delay: {si *
                                                 100}ms"
@@ -96,7 +96,7 @@
 
                                 <!-- Quote -->
                                 <blockquote
-                                    class="text-xl md:text-2xl lg:text-3xl font-medium text-base-content leading-relaxed mb-10 italic"
+                                    class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-base-content leading-relaxed mb-8 md:mb-10 italic"
                                 >
                                     "{t.quote}"
                                 </blockquote>
@@ -107,19 +107,19 @@
                                 >
                                     <div class="avatar">
                                         <div
-                                            class="w-16 h-16 rounded-full ring-4 ring-brand-primary/10 ring-offset-base-100 ring-offset-2"
+                                            class="w-14 h-14 md:w-16 md:h-16 rounded-full ring-4 ring-brand-primary/10 ring-offset-base-100 ring-offset-2"
                                         >
                                             <img src={t.avatar} alt={t.name} />
                                         </div>
                                     </div>
                                     <div class="text-center md:text-left">
                                         <h4
-                                            class="font-bold text-xl text-base-content"
+                                            class="font-bold text-lg md:text-xl text-base-content"
                                         >
                                             {t.name}
                                         </h4>
                                         <span
-                                            class="text-sm text-brand-accent font-semibold tracking-wide uppercase"
+                                            class="text-xs md:text-sm text-brand-accent font-semibold tracking-wide uppercase"
                                             >{t.title}</span
                                         >
                                     </div>
@@ -130,9 +130,9 @@
                 </div>
             </div>
 
-            <!-- Navigation Buttons - Outside the Item for better visibility -->
+            <!-- Navigation Buttons - Hidden on Mobile to prevent overlap -->
             <div
-                class="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-8 z-20"
+                class="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-8 z-20 hidden md:block"
             >
                 <a
                     href="#testimonial-slide-{(activeIndex -
@@ -147,7 +147,7 @@
                 </a>
             </div>
             <div
-                class="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-8 z-20"
+                class="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-8 z-20 hidden md:block"
             >
                 <a
                     href="#testimonial-slide-{(activeIndex + 1) %

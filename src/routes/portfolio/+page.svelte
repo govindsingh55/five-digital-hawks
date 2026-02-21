@@ -114,12 +114,12 @@
 <section class="py-24 bg-base-100">
     <div class="container mx-auto px-4 max-w-7xl">
         <div
-            class="flex flex-wrap justify-center gap-3 mb-16 reveal"
+            class="flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-3 mb-16 overflow-x-auto pb-4 hide-scrollbar reveal"
             use:inview
         >
             {#each categories as cat}
                 <button
-                    class="btn btn-sm rounded-full transition-all {activeFilter ===
+                    class="btn btn-sm rounded-full transition-all whitespace-nowrap {activeFilter ===
                     cat
                         ? 'btn-primary shadow-lg scale-105'
                         : 'btn-ghost border border-base-300 hover:border-brand-accent'}"
@@ -138,7 +138,7 @@
                     use:inview
                 >
                     <!-- Image -->
-                    <figure class="relative h-52 overflow-hidden">
+                    <figure class="relative h-48 sm:h-52 overflow-hidden">
                         <img
                             src={project.image}
                             alt={project.title}
@@ -153,42 +153,50 @@
                         </div>
                     </figure>
 
-                    <div class="card-body">
-                        <h3 class="card-title text-lg">{project.title}</h3>
-                        <p class="text-base-content/70 text-sm mb-4">
+                    <div
+                        class="card-body p-5 sm:p-8 items-center text-center md:items-start md:text-left"
+                    >
+                        <h3 class="card-title text-lg sm:text-xl">
+                            {project.title}
+                        </h3>
+                        <p
+                            class="text-base-content/70 text-sm mb-4 line-clamp-2 md:line-clamp-none"
+                        >
                             {project.desc}
                         </p>
 
                         <!-- Metrics -->
                         <div
-                            class="bg-base-200 rounded-xl p-4 flex items-center justify-between gap-4"
+                            class="bg-base-200 rounded-xl p-3 sm:p-4 flex flex-row items-center justify-between gap-2 sm:gap-4"
                         >
                             <div class="text-center">
                                 <p
-                                    class="text-xs text-base-content/50 uppercase mb-1"
+                                    class="text-[10px] sm:text-xs text-base-content/50 uppercase mb-1"
                                 >
                                     Before
                                 </p>
-                                <p class="font-bold text-sm">
+                                <p class="font-bold text-xs sm:text-sm">
                                     {project.metrics.before}
                                 </p>
                             </div>
                             <TrendingUp
-                                size={20}
+                                size={18}
                                 class="text-brand-accent shrink-0"
                             />
                             <div class="text-center">
                                 <p
-                                    class="text-xs text-base-content/50 uppercase mb-1"
+                                    class="text-[10px] sm:text-xs text-base-content/50 uppercase mb-1"
                                 >
                                     After
                                 </p>
-                                <p class="font-bold text-sm text-brand-accent">
+                                <p
+                                    class="font-bold text-xs sm:text-sm text-brand-accent"
+                                >
                                     {project.metrics.after}
                                 </p>
                             </div>
                             <div
-                                class="badge badge-success badge-outline font-bold"
+                                class="badge badge-success badge-outline badge-xs sm:badge-sm font-bold"
                             >
                                 {project.metrics.growth}
                             </div>
@@ -207,6 +215,14 @@
 <CTABanner />
 
 <style>
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
     @keyframes fade-in-up {
         from {
             opacity: 0;

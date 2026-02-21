@@ -55,9 +55,16 @@ body {
   animation: float-delayed 6s ease-in-out 3s infinite;
 }
 
-/* --- Smooth Scroll --- */
-html {
+/* --- Smooth Scroll & Overflow Fix --- */
+html,
+body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  width: 100%;
 }
 
 /* --- Scroll Reveal System --- */

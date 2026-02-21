@@ -222,7 +222,7 @@
 
     <div class="container mx-auto px-4 max-w-5xl relative z-10 text-center">
         <h1
-            class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 animate-[fade-in-up_0.8s_ease-out]"
+            class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 animate-[fade-in-up_0.8s_ease-out]"
         >
             Our <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
@@ -230,7 +230,7 @@
             >
         </h1>
         <p
-            class="text-xl md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
+            class="text-lg md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
         >
             Full-stack marketing solutions engineered for exponential growth.
             Choose one channel or combine them all.
@@ -247,9 +247,11 @@
                     class="card bg-base-100 card-premium border border-base-200/50 group reveal"
                     use:inview
                 >
-                    <div class="card-body">
+                    <div
+                        class="card-body items-center text-center md:items-start md:text-left"
+                    >
                         <div
-                            class="w-14 h-14 rounded-2xl bg-brand-primary/5 text-brand-primary flex items-center justify-center mb-4 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-110 transition-all duration-300"
+                            class="w-14 h-14 rounded-2xl bg-brand-primary/5 text-brand-primary flex items-center justify-center mb-4 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 mx-auto md:mx-0"
                         >
                             <svc.icon size={28} strokeWidth={1.5} />
                         </div>
@@ -282,17 +284,19 @@
     <div class="container mx-auto px-4 max-w-7xl">
         <div class="text-center max-w-3xl mx-auto mb-16 reveal" use:inview>
             <h2
-                class="text-brand-accent font-semibold tracking-wide uppercase mb-3"
+                class="text-brand-accent font-semibold tracking-wide uppercase mb-3 text-sm md:text-base"
             >
                 Pricing
             </h2>
-            <h3 class="text-4xl md:text-5xl font-bold text-base-content mb-6">
+            <h3
+                class="text-2xl sm:text-4xl md:text-5xl font-bold text-base-content mb-6"
+            >
                 Plans That <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-highlight"
                     >Scale With You</span
                 >
             </h3>
-            <p class="text-lg text-base-content/70">
+            <p class="text-base md:text-lg text-base-content/70">
                 No long-term contracts. No hidden fees. Just results.
             </p>
         </div>
@@ -301,11 +305,11 @@
             {#each plans as plan, i}
                 <div
                     class="card shadow-xl border transition-all duration-300 hover:-translate-y-2 reveal {plan.accent
-                        ? 'bg-brand-primary text-white border-brand-accent scale-105 shadow-[0_20px_60px_-15px_rgba(31,42,85,0.4)]'
+                        ? 'bg-brand-primary text-white border-brand-accent md:scale-105 shadow-[0_20px_60px_-15px_rgba(31,42,85,0.4)]'
                         : 'bg-base-100 border-base-200/50'}"
                     use:inview
                 >
-                    <div class="card-body p-8">
+                    <div class="card-body p-8 items-center text-center">
                         {#if plan.accent}
                             <div class="badge badge-secondary mb-2">
                                 Most Popular

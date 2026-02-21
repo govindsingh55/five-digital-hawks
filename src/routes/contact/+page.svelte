@@ -85,7 +85,7 @@
 
     <div class="container mx-auto px-4 max-w-5xl relative z-10 text-center">
         <h1
-            class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 animate-[fade-in-up_0.8s_ease-out]"
+            class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 animate-[fade-in-up_0.8s_ease-out]"
         >
             Let's <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
@@ -93,7 +93,7 @@
             >
         </h1>
         <p
-            class="text-xl md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
+            class="text-lg md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
         >
             Ready to transform your marketing? Fill out the form below and we'll
             get back to you within 24 hours.
@@ -215,7 +215,7 @@
                 <div class="flex flex-col gap-6">
                     {#each officeInfo as info}
                         <div
-                            class="card bg-base-100 card-premium p-6 flex flex-row items-start gap-4 border border-base-200"
+                            class="card bg-base-100 card-premium p-6 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 border border-base-200"
                         >
                             <div
                                 class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-colors"

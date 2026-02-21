@@ -94,13 +94,13 @@
 
                 {#each differentiators as diff, i}
                     <div
-                        class="card bg-base-100 card-premium border border-base-200/40 p-6 reveal {cardDelays[
+                        class="card bg-base-100 card-premium border border-base-200/40 p-6 flex items-center text-center md:items-start md:text-left reveal {cardDelays[
                             i
                         ]} {i === 1 || i === 3 ? 'sm:mt-8' : ''}"
                         use:inview
                     >
                         <div
-                            class="w-12 h-12 rounded-xl bg-brand-highlight/20 text-brand-highlight flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+                            class="w-12 h-12 rounded-xl bg-brand-highlight/20 text-brand-highlight flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto md:mx-0"
                         >
                             <diff.icon size={24} strokeWidth={2} />
                         </div>
