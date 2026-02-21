@@ -1,6 +1,8 @@
 <script lang="ts">
     import { Star, ChevronLeft, ChevronRight, Quote } from "@lucide/svelte";
     import { inview } from "$lib/actions/inview";
+    import useEmblaCarousel from "embla-carousel-svelte";
+    import type { EmblaCarouselType } from "embla-carousel";
 
     const testimonials = [
         {
@@ -23,15 +25,29 @@
         },
     ];
 
+    let emblaApi: EmblaCarouselType | undefined = $state();
     let activeIndex = $state(0);
 
+    const onInit = (event: CustomEvent<EmblaCarouselType>) => {
+        emblaApi = event.detail;
+        emblaApi.on("select", onSelect);
+    };
+
+    const onSelect = () => {
+        if (!emblaApi) return;
+        activeIndex = emblaApi.selectedScrollSnap();
+    };
+
     function nextSlide() {
-        activeIndex = (activeIndex + 1) % testimonials.length;
+        emblaApi?.scrollNext();
     }
 
     function prevSlide() {
-        activeIndex =
-            (activeIndex - 1 + testimonials.length) % testimonials.length;
+        emblaApi?.scrollPrev();
+    }
+
+    function goToSlide(index: number) {
+        emblaApi?.scrollTo(index);
     }
 </script>
 
@@ -75,59 +91,60 @@
                 use:inview
             >
                 <div class="card-body p-0">
-                    <div class="carousel w-full">
-                        {#each testimonials as t, i}
-                            <div
-                                id="testimonial-slide-{i}"
-                                class="carousel-item relative w-full flex flex-col items-center text-center px-6 py-12 md:px-20 md:py-20"
-                            >
-                                <!-- Rating -->
+                    <div class="embla overflow-hidden" use:useEmblaCarousel={{ loop: true }} oninit={onInit}>
+                        <div class="embla__container flex">
+                            {#each testimonials as t, i}
                                 <div
-                                    class="flex gap-1 text-brand-highlight mb-6 md:mb-8"
+                                    class="embla__slide flex-[0_0_100%] min-w-0 relative flex flex-col items-center text-center px-6 py-12 md:px-20 md:py-20"
                                 >
-                                    {#each Array(5) as _, si}
-                                        <Star
-                                            fill="currentColor"
-                                            size={18}
-                                            class="animate-[star-pop_0.4s_ease_both]"
-                                            style="animation-delay: {si *
-                                                100}ms"
-                                        />
-                                    {/each}
-                                </div>
+                                    <!-- Rating -->
+                                    <div
+                                        class="flex gap-1 text-brand-highlight mb-6 md:mb-8"
+                                    >
+                                        {#each Array(5) as _, si}
+                                            <Star
+                                                fill="currentColor"
+                                                size={18}
+                                                class="animate-[star-pop_0.4s_ease_both]"
+                                                style="animation-delay: {si *
+                                                    100}ms"
+                                            />
+                                        {/each}
+                                    </div>
 
-                                <!-- Quote -->
-                                <blockquote
-                                    class="text-base sm:text-xl md:text-2xl lg:text-3xl font-medium text-base-content leading-relaxed mb-8 md:mb-10 italic max-w-xs sm:max-w-none"
-                                >
-                                    "{t.quote}"
-                                </blockquote>
+                                    <!-- Quote -->
+                                    <blockquote
+                                        class="text-base sm:text-xl md:text-2xl lg:text-3xl font-medium text-base-content leading-relaxed mb-8 md:mb-10 italic max-w-xs sm:max-w-none"
+                                    >
+                                        "{t.quote}"
+                                    </blockquote>
 
-                                <!-- Author -->
-                                <div
-                                    class="flex flex-col md:flex-row items-center gap-4 mt-auto"
-                                >
-                                    <div class="avatar">
-                                        <div
-                                            class="w-14 h-14 md:w-16 md:h-16 rounded-full ring-4 ring-brand-primary/10 ring-offset-base-100 ring-offset-2"
-                                        >
-                                            <img src={t.avatar} alt={t.name} />
+                                    <!-- Author -->
+                                    <div
+                                        class="flex flex-col md:flex-row items-center gap-4 mt-auto"
+                                    >
+                                        <div class="avatar">
+                                            <div
+                                                class="w-14 h-14 md:w-16 md:h-16 rounded-full ring-4 ring-brand-primary/10 ring-offset-base-100 ring-offset-2"
+                                            >
+                                                <img src={t.avatar} alt={t.name} />
+                                            </div>
+                                        </div>
+                                        <div class="text-center md:text-left">
+                                            <h4
+                                                class="font-bold text-lg md:text-xl text-base-content"
+                                            >
+                                                {t.name}
+                                            </h4>
+                                            <span
+                                                class="text-xs md:text-sm text-brand-accent/80 font-bold tracking-wider uppercase"
+                                                >{t.title}</span
+                                            >
                                         </div>
                                     </div>
-                                    <div class="text-center md:text-left">
-                                        <h4
-                                            class="font-bold text-lg md:text-xl text-base-content"
-                                        >
-                                            {t.name}
-                                        </h4>
-                                        <span
-                                            class="text-xs md:text-sm text-brand-accent/80 font-bold tracking-wider uppercase"
-                                            >{t.title}</span
-                                        >
-                                    </div>
                                 </div>
-                            </div>
-                        {/each}
+                            {/each}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -136,45 +153,38 @@
             <div
                 class="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-8 z-20 hidden md:block"
             >
-                <a
-                    href="#testimonial-slide-{(activeIndex -
-                        1 +
-                        testimonials.length) %
-                        testimonials.length}"
+                <button
                     class="btn btn-circle btn-primary shadow-xl hover:scale-110 transition-transform border-none"
                     onclick={prevSlide}
                     aria-label="Previous testimonial"
                 >
                     <ChevronLeft size={24} />
-                </a>
+                </button>
             </div>
             <div
                 class="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-8 z-20 hidden md:block"
             >
-                <a
-                    href="#testimonial-slide-{(activeIndex + 1) %
-                        testimonials.length}"
+                <button
                     class="btn btn-circle btn-primary shadow-xl hover:scale-110 transition-transform border-none"
                     onclick={nextSlide}
                     aria-label="Next testimonial"
                 >
                     <ChevronRight size={24} />
-                </a>
+                </button>
             </div>
         </div>
 
         <!-- Pagination Dots -->
         <div class="flex justify-center items-center py-10 gap-3">
             {#each testimonials as _, i}
-                <a
-                    href="#testimonial-slide-{i}"
+                <button
                     class="w-3 h-3 rounded-full transition-all duration-300 {activeIndex ===
                     i
                         ? 'bg-brand-primary w-8'
                         : 'bg-base-300 hover:bg-brand-highlight'}"
-                    onclick={() => (activeIndex = i)}
+                    onclick={() => goToSlide(i)}
                     aria-label="Go to testimonial {i + 1}"
-                ></a>
+                ></button>
             {/each}
         </div>
     </div>
@@ -190,15 +200,5 @@
             opacity: 1;
             transform: scale(1);
         }
-    }
-
-    /* Hide scrollbar but keep functionality */
-    .carousel {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        scroll-behavior: smooth;
-    }
-    .carousel::-webkit-scrollbar {
-        display: none;
     }
 </style>
