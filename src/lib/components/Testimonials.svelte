@@ -37,7 +37,7 @@
 
 <section
     id="testimonials"
-    class="py-24 bg-base-200/50 relative overflow-hidden"
+    class="py-24 bg-base-200/50 relative overflow-hidden scroll-mt-24"
 >
     <!-- Decorative background elements -->
     <div
@@ -50,11 +50,13 @@
     <div class="container mx-auto px-4 max-w-7xl relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16 reveal" use:inview>
             <h2
-                class="text-brand-accent font-semibold tracking-wide uppercase mb-3"
+                class="text-brand-accent font-semibold tracking-wide uppercase mb-3 text-sm md:text-base"
             >
                 Testimonials
             </h2>
-            <h3 class="text-4xl md:text-5xl font-bold text-base-content mb-6">
+            <h3
+                class="text-2xl sm:text-4xl md:text-5xl font-bold text-base-content mb-6"
+            >
                 What Our Clients Say
             </h3>
         </div>
@@ -77,7 +79,7 @@
                         {#each testimonials as t, i}
                             <div
                                 id="testimonial-slide-{i}"
-                                class="carousel-item relative w-full flex flex-col items-center text-center px-4 py-10 md:px-20 md:py-20"
+                                class="carousel-item relative w-full flex flex-col items-center text-center px-6 py-12 md:px-20 md:py-20"
                             >
                                 <!-- Rating -->
                                 <div
@@ -96,7 +98,7 @@
 
                                 <!-- Quote -->
                                 <blockquote
-                                    class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-base-content leading-relaxed mb-8 md:mb-10 italic"
+                                    class="text-base sm:text-xl md:text-2xl lg:text-3xl font-medium text-base-content leading-relaxed mb-8 md:mb-10 italic max-w-xs sm:max-w-none"
                                 >
                                     "{t.quote}"
                                 </blockquote>
@@ -119,7 +121,7 @@
                                             {t.name}
                                         </h4>
                                         <span
-                                            class="text-xs md:text-sm text-brand-accent font-semibold tracking-wide uppercase"
+                                            class="text-xs md:text-sm text-brand-accent/80 font-bold tracking-wider uppercase"
                                             >{t.title}</span
                                         >
                                     </div>
