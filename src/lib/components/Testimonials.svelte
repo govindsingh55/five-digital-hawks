@@ -91,7 +91,14 @@
                 use:inview
             >
                 <div class="card-body p-0">
-                    <div class="embla overflow-hidden" use:useEmblaCarousel={{ loop: true }} oninit={onInit}>
+                    <div
+                        class="embla overflow-hidden"
+                        use:useEmblaCarousel={{
+                            options: { loop: true },
+                            plugins: [],
+                        }}
+                        onemblainit={onInit}
+                    >
                         <div class="embla__container flex">
                             {#each testimonials as t, i}
                                 <div
@@ -127,7 +134,10 @@
                                             <div
                                                 class="w-14 h-14 md:w-16 md:h-16 rounded-full ring-4 ring-brand-primary/10 ring-offset-base-100 ring-offset-2"
                                             >
-                                                <img src={t.avatar} alt={t.name} />
+                                                <img
+                                                    src={t.avatar}
+                                                    alt={t.name}
+                                                />
                                             </div>
                                         </div>
                                         <div class="text-center md:text-left">
