@@ -34,7 +34,9 @@
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                    href="/contact"
+                    href="https://calendar.app.google/UmcGwtPbfFQkmUPb9"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="btn btn-primary btn-md md:btn-lg rounded-full px-6 md:px-10 hover:scale-105 shadow-[0_10px_40px_-10px_rgba(79,99,186,0.7)] transition-all animate-pulse-glow"
                 >
                     Book Free Consultation

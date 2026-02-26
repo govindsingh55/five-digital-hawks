@@ -2,13 +2,10 @@
     import {
         Mail,
         MessageSquare,
+        Bell,
+        Users,
+        Settings,
         Monitor,
-        Search,
-        Share2,
-        MousePointerClick,
-        Edit3,
-        Heart,
-        Target,
         Check,
         ArrowRight,
     } from "@lucide/svelte";
@@ -19,7 +16,7 @@
         {
             title: "Email Marketing",
             description:
-                "From welcome flows to win-back sequences, we design and deploy email automations that nurture subscribers into loyal customers. Our campaigns average 35%+ open rates and 4× industry-standard click rates.",
+                "From welcome flows to win-back sequences, we design and deploy email automations that nurture subscribers into loyal customers. Our campaigns average 35%+ open rates.",
             icon: Mail,
             features: [
                 "Automated Flow Design",
@@ -31,7 +28,7 @@
         {
             title: "SMS Marketing",
             description:
-                "Direct, personal, and high-converting. Our SMS campaigns reach customers where they're most engaged — their phones. Average 98% open rates within 3 minutes of delivery.",
+                "Direct, personal, and high-converting. Our SMS campaigns reach customers where they're most engaged — their phones. Average 98% open rates.",
             icon: MessageSquare,
             features: [
                 "Campaign Automation",
@@ -41,117 +38,81 @@
             ],
         },
         {
-            title: "Website Design",
+            title: "Push Marketing",
             description:
-                "Modern, lightning-fast websites and landing pages built for conversion. CRO-optimized layouts with stunning visuals that tell your brand's story and drive action.",
+                "Reach your audience instantly with high-impact browser and mobile notifications. Perfect for time-sensitive offers and re-engagement.",
+            icon: Bell,
+            features: [
+                "Browser Push",
+                "App Notifications",
+                "Triggered Alerts",
+                "Behavioral Targeting",
+            ],
+        },
+        {
+            title: "Lifecycle Management",
+            description:
+                "Strategic orchestration of the entire customer journey. We map every touchpoint to maximize retention and lifetime value.",
+            icon: Users,
+            features: [
+                "Journey Mapping",
+                "Churn Reduction",
+                "Retention Audits",
+                "LTV Optimization",
+            ],
+        },
+        {
+            title: "CRM Management",
+            description:
+                "Data-driven customer relationship management. We clean, segment, and leverage your data to build stronger customer bonds.",
+            icon: Settings,
+            features: [
+                "Database Hygiene",
+                "Advanced Segmentation",
+                "Sync & Automation",
+                "Predictive Analytics",
+            ],
+        },
+        {
+            title: "Website Development",
+            description:
+                "Modern, high-converting stores and landing pages optimized for performance and scale. Built for the modern e-commerce landscape.",
             icon: Monitor,
             features: [
-                "Responsive Design",
-                "CRO Optimization",
-                "Speed Optimization",
-                "Custom Development",
-            ],
-        },
-        {
-            title: "SEO",
-            description:
-                "Dominate organic search with data-driven SEO strategies. From technical audits to content strategy, we build sustainable organic traffic engines.",
-            icon: Search,
-            features: [
-                "Technical SEO Audit",
-                "Keyword Research",
-                "Content Strategy",
-                "Link Building",
-            ],
-        },
-        {
-            title: "Social Media",
-            description:
-                "Engaging content calendars, community management, and paid social advertising across Instagram, Facebook, LinkedIn, and TikTok.",
-            icon: Share2,
-            features: [
-                "Content Creation",
-                "Community Management",
-                "Paid Advertising",
-                "Analytics Reporting",
-            ],
-        },
-        {
-            title: "PPC Management",
-            description:
-                "Targeted pay-per-click campaigns on Google Ads, Meta, and more. We optimize every dollar for maximum ROAS and lead quality.",
-            icon: MousePointerClick,
-            features: [
-                "Google Ads",
-                "Meta Ads",
-                "Retargeting",
-                "Landing Page Testing",
-            ],
-        },
-        {
-            title: "Content Marketing",
-            description:
-                "Compelling blogs, guides, video scripts, and copy that build authority, attract organic traffic, and convert readers into customers.",
-            icon: Edit3,
-            features: [
-                "Blog Strategy",
-                "Video Scripts",
-                "Whitepapers",
-                "Brand Copywriting",
-            ],
-        },
-        {
-            title: "Influencer Marketing",
-            description:
-                "Strategic influencer partnerships that amplify your brand reach and build authentic trust with new audiences.",
-            icon: Heart,
-            features: [
-                "Influencer Sourcing",
-                "Campaign Management",
-                "Performance Tracking",
-                "Contract Negotiation",
-            ],
-        },
-        {
-            title: "360° Marketing",
-            description:
-                "A fully integrated omnichannel strategy that aligns email, SMS, paid, organic, and content for compounding growth.",
-            icon: Target,
-            features: [
-                "Omnichannel Strategy",
-                "Marketing Audit",
-                "Funnel Architecture",
-                "Data Analytics",
+                "High-Speed Stores",
+                "CRO Layouts",
+                "Custom UX/UI",
+                "Svelte/Next.js Tech",
             ],
         },
     ];
 
     const plans = [
         {
-            name: "Starter",
+            name: "Retention Starter",
             price: "$2,500",
             period: "/month",
-            desc: "Perfect for startups and small businesses looking to get off the ground.",
+            desc: "Ideal for startups building their first data-driven retention systems.",
             features: [
-                "1 Marketing Channel",
-                "Monthly Strategy Call",
                 "Email or SMS Setup",
-                "Basic Reporting Dashboard",
+                "Basic Lifecycle Flows",
+                "Monthly Strategy Call",
+                "Performance Dashboard",
                 "Email Support",
             ],
             accent: false,
         },
         {
-            name: "Growth",
+            name: "Lifecycle Growth",
             price: "$5,500",
             period: "/month",
-            desc: "For scaling brands that need multi-channel firepower and dedicated strategy.",
+            desc: "For scaling brands that need full-service lifecycle and retention focus.",
             features: [
-                "Up to 3 Channels",
+                "Email, SMS & Push Setup",
+                "Advanced Flows & Segments",
                 "Weekly Strategy Calls",
-                "Dedicated Account Manager",
-                "Advanced A/B Testing",
-                "Custom Reporting Dashboard",
+                "Dedicated Account Lead",
+                "Custom Data Reporting",
                 "Priority Support",
             ],
             accent: true,
@@ -160,14 +121,13 @@
             name: "Enterprise",
             price: "Custom",
             period: "",
-            desc: "Full-service 360° marketing for brands ready to dominate their market.",
+            desc: "Bespoke retention engines for brands ready to maximize LTV at scale.",
             features: [
-                "All Channels",
+                "Full Lifecycle Orchestration",
+                "CRM & Data Integration",
+                "Team of 5+ Dedicated Experts",
                 "Daily Slack Access",
-                "Dedicated Team of 5+",
-                "Executive Strategy Sessions",
-                "Custom Integrations",
-                "White-Label Reporting",
+                "Bi-Weekly Exec Strategy",
                 "24/7 Priority Support",
             ],
             accent: false,
@@ -176,24 +136,20 @@
 
     const faqs = [
         {
-            q: "How quickly can we expect results?",
-            a: "Most clients see measurable improvements within the first 30 days. Significant ROI typically materializes within 60-90 days, depending on the channel and strategy.",
+            q: "How quickly can we expect results from lifecycle marketing?",
+            a: "Retention improvements are often seen within 30 days of flow deployment. Significant LTV growth typically materializes within 60-90 days.",
         },
         {
             q: "Do you require long-term contracts?",
-            a: "No. We operate on month-to-month agreements. We believe our results should keep you, not a contract. That said, 98% of our clients stay beyond 12 months.",
+            a: "No. We operate on month-to-month agreements. We believe our results should keep you, not a contract.",
         },
         {
-            q: "Which ESPs do you work with?",
-            a: "We're certified partners with Klaviyo, Mailchimp, SendGrid, HubSpot, ActiveCampaign, and many more. We'll recommend the best fit for your tech stack.",
+            q: "Which platforms do you work with?",
+            a: "We are certified experts in Klaviyo, Attentive, Postscript, HubSpot, and more. We'll work within your existing stack or recommend the best fits.",
         },
         {
             q: "Can you work with our existing team?",
-            a: "Absolutely. We frequently collaborate with in-house teams, acting as an extension of your marketing department rather than a replacement.",
-        },
-        {
-            q: "What industries do you specialize in?",
-            a: "We've served 20+ industries, with deep expertise in e-commerce, SaaS, health & wellness, fintech, and professional services.",
+            a: "Absolutely. We often act as an extension of in-house marketing departments, handling technical execution and strategy planning.",
         },
     ];
 
@@ -204,10 +160,10 @@
 </script>
 
 <svelte:head>
-    <title>Our Services | Five Digital Hawks</title>
+    <title>Services | Five Digital Hawks</title>
     <meta
         name="description"
-        content="Explore our full suite of marketing services — email, SMS, SEO, PPC, social media, content, and 360° strategies."
+        content="Strategic lifecycle and retention marketing services including email, SMS, push, and CRM management."
     />
 </svelte:head>
 
@@ -224,16 +180,17 @@
         <h1
             class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 animate-[fade-in-up_0.8s_ease-out]"
         >
-            Our <span
+            Lifecycle <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
-                >Services</span
+                >Marketing</span
             >
         </h1>
         <p
             class="text-lg md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
         >
-            Full-stack marketing solutions engineered for exponential growth.
-            Choose one channel or combine them all.
+            We build data-driven retention engines that turn high-traffic stores
+            into profitable brands through strategic Email, SMS, & Push
+            notification marketing.
         </p>
     </div>
 </section>
@@ -297,7 +254,7 @@
                 >
             </h3>
             <p class="text-base md:text-lg text-base-content/70">
-                No long-term contracts. No hidden fees. Just results.
+                Data-driven retention for every stage of growth.
             </p>
         </div>
 
@@ -341,12 +298,14 @@
                         </ul>
 
                         <a
-                            href="/contact"
+                            href="https://calendar.app.google/UmcGwtPbfFQkmUPb9"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="btn {plan.accent
                                 ? 'btn-secondary'
                                 : 'btn-primary'} rounded-full w-full hover:scale-105 transition-transform"
                         >
-                            Get Started <ArrowRight size={18} class="ml-1" />
+                            Book Call <ArrowRight size={18} class="ml-1" />
                         </a>
                     </div>
                 </div>

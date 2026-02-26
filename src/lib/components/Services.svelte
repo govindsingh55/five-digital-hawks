@@ -2,13 +2,10 @@
     import {
         Mail,
         MessageSquare,
+        Bell,
+        Users,
+        Settings,
         Monitor,
-        Search,
-        Share2,
-        MousePointerClick,
-        Edit3,
-        Heart,
-        Target,
     } from "@lucide/svelte";
     import { inview } from "$lib/actions/inview";
 
@@ -26,54 +23,33 @@
             icon: MessageSquare,
         },
         {
-            title: "Website Design",
+            title: "Push Marketing",
             description:
-                "Modern, high-converting stores and landing pages optimized for speed.",
+                "Reach your audience instantly with high-impact browser and mobile notifications.",
+            icon: Bell,
+        },
+        {
+            title: "Lifecycle Management",
+            description:
+                "Strategic orchestration of the entire customer journey from acquisition to retention.",
+            icon: Users,
+        },
+        {
+            title: "CRM Management",
+            description:
+                "Data-driven customer relationship management to maximize long-term value.",
+            icon: Settings,
+        },
+        {
+            title: "Website Development",
+            description:
+                "Modern, high-converting stores and landing pages optimized for performance and scale.",
             icon: Monitor,
-        },
-        {
-            title: "SEO",
-            description:
-                "Data-driven search engine optimization to rank you higher and drive organic traffic.",
-            icon: Search,
-        },
-        {
-            title: "Social Media",
-            description:
-                "Engaging content and community management across platforms.",
-            icon: Share2,
-        },
-        {
-            title: "PPC Management",
-            description:
-                "Targeted ad campaigns on Google, Meta, and more for instant ROI.",
-            icon: MousePointerClick,
-        },
-        {
-            title: "Content Marketing",
-            description:
-                "Compelling blogs, guides, and copy that tell your brand story.",
-            icon: Edit3,
-        },
-        {
-            title: "Influencer Marketing",
-            description:
-                "Strategic partnerships to amplify your brand reach and authenticity.",
-            icon: Heart,
-        },
-        {
-            title: "360° Marketing",
-            description:
-                "Comprehensive omnichannel strategy aligning all efforts for maximum growth.",
-            icon: Target,
         },
     ];
 
     const delays = [
         "",
-        "delay-100",
-        "delay-200",
-        "delay-300",
         "delay-100",
         "delay-200",
         "delay-300",

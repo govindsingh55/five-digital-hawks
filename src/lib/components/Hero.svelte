@@ -40,33 +40,41 @@
 
                 <!-- Headline -->
                 <h1
-                    class="text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
+                    class="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight mb-8 leading-[1.2] animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
                 >
-                    Marketing to <br class="hidden lg:block" />
+                    Driving Sustainable Growth with <br class="hidden lg:block" />
                     <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
-                        >Fly High!</span
+                        >Retention & Lifecycle Email Marketing</span
                     >
                 </h1>
 
                 <!-- Subheadline -->
-                <p
-                    class="text-xl md:text-2xl text-blue-100 max-w-2xl mb-10 font-light animate-[fade-in-up_0.8s_ease-out_0.4s_both]"
+                <div
+                    class="text-lg md:text-xl text-blue-100 max-w-2xl mb-10 font-light animate-[fade-in-up_0.8s_ease-out_0.4s_both] space-y-4"
                 >
-                    We architect data-driven Email, SMS, & 360° marketing
-                    systems that transform your traffic into loyal, high-LTV
-                    customers.
-                </p>
+                    <p>
+                        We help brands grow sustainably by increasing customer lifetime value and driving revenue through strategic email, SMS, and push notification marketing.
+                    </p>
+                    <p>
+                        As a full-service lifecycle marketing partner, we handle everything from strategy and planning to design, development, automation, and execution. Whether you're a startup building your foundation or an enterprise brand optimizing at scale, we create data-driven retention systems that turn subscribers into long-term customers.
+                    </p>
+                    <p>
+                        From campaign management to advanced automation flows, we don’t just send emails, we build revenue engines.
+                    </p>
+                </div>
 
                 <!-- CTAs -->
                 <div
                     class="flex flex-col sm:flex-row gap-4 mb-16 animate-[fade-in-up_0.8s_ease-out_0.5s_both]"
                 >
                     <a
-                        href="#contact"
-                        class="btn btn-primary bg-brand-accent border-none text-white hover:bg-brand-highlight btn-lg rounded-full px-8 shadow-[0_10px_40px_-10px_rgba(79,99,186,0.7)] hover:shadow-[0_15px_50px_-10px_rgba(133,152,219,0.8)] transition-all"
+                        href="https://calendar.app.google/UmcGwtPbfFQkmUPb9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary bg-brand-accent border-none text-white hover:bg-brand-highlight btn-lg rounded-full px-8 shadow-[0_10px_40px_-10px_rgba(79,99,186,0.7)] hover:shadow-[0_15px_50px_-10_rgba(133,152,219,0.8)] transition-all"
                     >
-                        Get Free Consultation
+                        Book Free Consultation
                         <ArrowRight size={20} class="ml-2" />
                     </a>
                     <a

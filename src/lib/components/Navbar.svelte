@@ -74,7 +74,9 @@
         <!-- Desktop CTA -->
         <div class="navbar-end hidden lg:flex">
             <a
-                href="/contact"
+                href="https://calendar.app.google/UmcGwtPbfFQkmUPb9"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="btn btn-primary rounded-full hover:scale-105 transition-transform"
                 >Get Free Consultation</a
             >
@@ -114,9 +116,11 @@
                         >
                     </li>
                 {/each}
-                <li class="mt-4">
+                <li>
                     <a
-                        href="/contact"
+                        href="https://calendar.app.google/UmcGwtPbfFQkmUPb9"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onclick={closeMobileMenu}
                         class="btn btn-primary w-full rounded-full"
                         >Get Free Consultation</a

@@ -78,28 +78,28 @@
                         <a
                             href="/services"
                             class="link link-hover text-base-content/70 hover:text-brand-accent transition-colors"
-                            >Website Design</a
+                            >Push Marketing</a
                         >
                     </li>
                     <li>
                         <a
                             href="/services"
                             class="link link-hover text-base-content/70 hover:text-brand-accent transition-colors"
-                            >SEO Optimization</a
+                            >Lifecycle Management</a
                         >
                     </li>
                     <li>
                         <a
                             href="/services"
                             class="link link-hover text-base-content/70 hover:text-brand-accent transition-colors"
-                            >PPC Campaigns</a
+                            >CRM Management</a
                         >
                     </li>
                     <li>
                         <a
                             href="/services"
                             class="link link-hover text-base-content/70 hover:text-brand-accent transition-colors"
-                            >360° Marketing</a
+                            >Website Development</a
                         >
                     </li>
                 </ul>

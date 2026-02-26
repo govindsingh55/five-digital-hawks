@@ -7,12 +7,19 @@
 @theme {
   --font-sans: "Inter", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+  /* Brand Colors */
   --color-brand-primary: #1F2A55;
-  /* Deep Navy from logo */
+  /* Deep Navy */
   --color-brand-accent: #4F63BA;
-  /* Medium Slate Blue from '5' */
+  /* Purple-ish Slate Blue */
   --color-brand-highlight: #8598DB;
-  /* Lighter tint for highlights */
+  /* Light Blue */
+
+  /* DaisyUI Mapping */
+  --color-primary: var(--color-brand-accent);
+  --color-primary-content: #ffffff;
+  --color-secondary: var(--color-brand-highlight);
+  --color-accent: var(--color-brand-highlight);
 }
 
 body {

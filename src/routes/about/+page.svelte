@@ -17,8 +17,8 @@
         },
         {
             year: "2017",
-            title: "ESP Partnerships",
-            desc: "Became certified partners with Klaviyo, Mailchimp, and SendGrid.",
+            title: "Retention Core",
+            desc: "Shifted focus to long-term customer lifetime value and retention systems.",
         },
         {
             year: "2020",
@@ -32,20 +32,20 @@
         },
         {
             year: "2026",
-            title: "360° Marketing",
-            desc: "Launched our full-service omnichannel marketing division.",
+            title: "Lifecycle Focus",
+            desc: "Launched our full-service lifecycle and retention marketing powerhouse.",
         },
     ];
 
     const values = [
         {
             title: "Mission",
-            desc: "To architect predictable, scalable, and profitable marketing systems for every ambitious brand.",
+            desc: "To architect predictable, scalable, and profitable retention systems for every ambitious brand.",
             icon: Target,
         },
         {
             title: "Vision",
-            desc: "A world where every business — big or small — has access to world-class marketing.",
+            desc: "A world where every business has access to top-tier lifecycle marketing usually reserved for giants.",
             icon: Eye,
         },
         {
@@ -55,17 +55,17 @@
         },
         {
             title: "Innovation",
-            desc: "We stay ahead of the curve with cutting-edge tools, AI, and creative techniques.",
+            desc: "We stay ahead of the curve with cutting-edge retention tools, AI, and creative techniques.",
             icon: Users,
         },
     ];
 </script>
 
 <svelte:head>
-    <title>About Us | Five Digital Hawks</title>
+    <title>About | Five Digital Hawks</title>
     <meta
         name="description"
-        content="Learn about Five Digital Hawks — our mission, our story, and the team that powers your marketing growth."
+        content="Learn about Five Digital Hawks — our mission to drive sustainable growth through retention and lifecycle marketing."
     />
 </svelte:head>
 
@@ -90,8 +90,9 @@
         <p
             class="text-lg md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
         >
-            Since 2011, we've been on a mission to make marketing measurable,
-            scalable, and wildly profitable for brands that refuse to settle.
+            We've been on a mission since 2011 to make marketing measurable,
+            sustainable, and wildly profitable through advanced retention
+            systems.
         </p>
     </div>
 </section>

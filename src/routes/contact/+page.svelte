@@ -37,27 +37,25 @@
     const serviceOptions = [
         "Email Marketing",
         "SMS Marketing",
-        "SEO",
-        "PPC Management",
-        "Social Media",
-        "Website Design",
-        "Content Marketing",
-        "360° Full-Stack",
+        "Push Marketing",
+        "Lifecycle Management",
+        "CRM Management",
+        "Website Development",
         "Other",
     ];
 
     const faqs = [
         {
-            q: "What happens after I submit the form?",
-            a: "Our team will review your inquiry and reach out within 24 business hours to schedule a free 30-minute strategy call.",
+            q: "What happens after I book a call?",
+            a: "You'll receive a confirmation email with a meeting link. During the call, we'll discuss your current retention setup and identify immediate growth opportunities.",
         },
         {
             q: "Is the consultation really free?",
             a: "Absolutely. The initial strategy session is 100% free, with no commitment or obligations. We'll audit your current setup and share actionable recommendations.",
         },
         {
-            q: "How quickly can you start?",
-            a: "Most projects kick off within 5-7 business days of agreement. For urgent needs, we offer accelerated onboarding.",
+            q: "Which platforms do you support?",
+            a: "We work with Klaviyo, Attentive, Postscript, HubSpot, and most major e-commerce and CRM platforms.",
         },
         {
             q: "Do you work with international clients?",
@@ -67,10 +65,10 @@
 </script>
 
 <svelte:head>
-    <title>Contact Us | Five Digital Hawks</title>
+    <title>Contact | Five Digital Hawks</title>
     <meta
         name="description"
-        content="Get in touch with Five Digital Hawks. Book a free consultation and start building your high-performance marketing engine."
+        content="Get in touch with Five Digital Hawks. Book a free consultation and start building your high-performance retention marketing engine."
     />
 </svelte:head>
 
@@ -87,22 +85,42 @@
         <h1
             class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 animate-[fade-in-up_0.8s_ease-out]"
         >
-            Let's <span
+            Build Your <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
-                >Talk Growth</span
+                >Revenue Engine</span
             >
         </h1>
         <p
-            class="text-lg md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
+            class="text-lg md:text-2xl text-blue-100 font-light max-w-3xl mx-auto animate-[fade-in-up_0.8s_ease-out_0.2s_both] mb-10"
         >
-            Ready to transform your marketing? Fill out the form below and we'll
-            get back to you within 24 hours.
+            Ready to transform your retention? Book a direct consultation or
+            send us a message below.
         </p>
+
+        <div
+            class="flex flex-col sm:flex-row gap-4 justify-center animate-[fade-in-up_0.8s_ease-out_0.3s_both]"
+        >
+            <a
+                href="https://calendar.app.google/UmcGwtPbfFQkmUPb9"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary bg-brand-accent border-none text-white hover:bg-brand-highlight btn-lg rounded-full px-10 shadow-lg transition-all"
+            >
+                Book Free Consultation
+                <ArrowRight size={20} class="ml-2" />
+            </a>
+            <a
+                href="#contact-form"
+                class="btn btn-outline btn-lg rounded-full px-10 text-white border-white/40 hover:bg-white hover:text-brand-primary transition-all backdrop-blur-sm"
+            >
+                Send Message
+            </a>
+        </div>
     </div>
 </section>
 
 <!-- Contact Form + Info -->
-<section class="py-24 bg-base-100">
+<section id="contact-form" class="py-24 bg-base-100">
     <div class="container mx-auto px-4 max-w-7xl">
         <div class="flex flex-col lg:flex-row gap-16">
             <!-- Form Column -->
