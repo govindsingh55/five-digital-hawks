@@ -2,34 +2,51 @@
     import { Linkedin, Twitter, Mail } from "@lucide/svelte";
     import { inview } from "$lib/actions/inview";
 
-    const team = [
+    interface TeamMember {
+        name: string;
+        role: string;
+        image: string;
+        social: {
+            linkedin: string;
+            twitter?: string;
+            mail?: string;
+        };
+    }
+
+    const team: TeamMember[] = [
         {
-            name: "Avinash Singh",
-            role: "CEO & Founder",
-            image: "https://i.pravatar.cc/300?u=a042581f4e29026024d",
-            social: { linkedin: "/" },
+            name: "Aaron",
+            role: "Co-founder",
+            image: "https://i.pravatar.cc/300?u=aaron",
+            social: { linkedin: "/", twitter: "", mail: "" },
         },
         {
-            name: "David Okafor",
-            role: "Head of Growth",
-            image: "https://i.pravatar.cc/300?u=a042581f4e29026704b",
-            social: { linkedin: "/", twitter: "/" },
+            name: "Alphonso",
+            role: "Co-founder",
+            image: "https://i.pravatar.cc/300?u=alphonso",
+            social: { linkedin: "/", twitter: "", mail: "" },
         },
         {
-            name: "Samantha Lee",
-            role: "Creative Director",
-            image: "https://i.pravatar.cc/300?u=a04258114e29026702c",
-            social: { linkedin: "/", mail: "/" },
+            name: "Harper",
+            role: "Co-founder",
+            image: "https://i.pravatar.cc/300?u=harper",
+            social: { linkedin: "/", twitter: "", mail: "" },
         },
         {
-            name: "James Wilson",
-            role: "Lead Strategist",
-            image: "https://i.pravatar.cc/300?u=a04258a2462d826712d",
-            social: { linkedin: "/" },
+            name: "David",
+            role: "Co-founder",
+            image: "https://i.pravatar.cc/300?u=david",
+            social: { linkedin: "/", twitter: "", mail: "" },
+        },
+        {
+            name: "Allie",
+            role: "Co-founder",
+            image: "https://i.pravatar.cc/300?u=allie",
+            social: { linkedin: "/", twitter: "", mail: "" },
         },
     ];
 
-    const delays = ["", "delay-100", "delay-200", "delay-300"];
+    const delays = ["", "delay-100", "delay-200", "delay-300", "delay-400"];
 </script>
 
 <section id="team" class="py-24 bg-base-200">
@@ -38,10 +55,10 @@
             <h2
                 class="text-brand-accent font-semibold tracking-wide uppercase mb-3"
             >
-                Our Team
+                Co-founders
             </h2>
             <h3 class="text-4xl md:text-5xl font-bold text-base-content mb-6">
-                The Hawks Behind the Magic
+                Team Directly Working on Your Strategies
             </h3>
             <p class="text-lg text-base-content/70 items-center justify-center">
                 Meet the experts who will be scaling your brand.

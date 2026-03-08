@@ -42,10 +42,9 @@
                 <h1
                     class="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight mb-8 leading-[1.2] animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
                 >
-                    Driving Sustainable Growth with <br class="hidden lg:block" />
-                    <span
+                    Email Marketing That <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
-                        >Retention & Lifecycle Email Marketing</span
+                        >Drives Growth</span
                     >
                 </h1>
 
@@ -54,13 +53,10 @@
                     class="text-lg md:text-xl text-blue-100 max-w-2xl mb-10 font-light animate-[fade-in-up_0.8s_ease-out_0.4s_both] space-y-4"
                 >
                     <p>
-                        We help brands grow sustainably by increasing customer lifetime value and driving revenue through strategic email, SMS, and push notification marketing.
-                    </p>
-                    <p>
-                        As a full-service lifecycle marketing partner, we handle everything from strategy and planning to design, development, automation, and execution. Whether you're a startup building your foundation or an enterprise brand optimizing at scale, we create data-driven retention systems that turn subscribers into long-term customers.
-                    </p>
-                    <p>
-                        From campaign management to advanced automation flows, we don’t just send emails, we build revenue engines.
+                        We help businesses grow with data-driven email and
+                        automation strategies. Whether you're a startup or
+                        scaling brand, we build retention systems that increase
+                        revenue and customer loyalty.
                     </p>
                 </div>
 
