@@ -46,6 +46,14 @@
         },
     ];
 
+    function getInitials(name: string) {
+        return name
+            .split(" ")
+            .map((n) => n[0])
+            .join("")
+            .toUpperCase();
+    }
+
     const delays = ["", "delay-100", "delay-200", "delay-300", "delay-400"];
 </script>
 
@@ -65,27 +73,21 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="flex flex-wrap justify-center gap-8">
             {#each team as member, i}
                 <div
-                    class="card bg-base-100 card-premium overflow-hidden group reveal {delays[
+                    class="card bg-base-100 card-premium overflow-hidden group reveal w-full max-w-xs {delays[
                         i
                     ]}"
                     use:inview
                 >
-                    <figure
-                        class="px-6 pt-6 relative overflow-hidden bg-brand-primary/5"
-                    >
+                    <div class="pt-10 flex justify-center">
                         <div
-                            class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg relative z-10 transition-transform duration-500 group-hover:scale-105"
+                            class="w-24 h-24 rounded-full bg-brand-primary text-white flex items-center justify-center text-3xl font-bold shadow-xl ring-4 ring-white transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-accent"
                         >
-                            <img
-                                src={member.image}
-                                alt={member.name}
-                                class="w-full h-full object-cover"
-                            />
+                            {getInitials(member.name)}
                         </div>
-                    </figure>
+                    </div>
                     <div class="card-body items-center text-center">
                         <h4 class="card-title text-xl mb-1">{member.name}</h4>
                         <p class="text-brand-accent font-medium text-sm mb-4">
