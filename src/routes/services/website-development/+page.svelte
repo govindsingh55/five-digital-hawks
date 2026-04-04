@@ -90,7 +90,7 @@
 
 <!-- Hero Section -->
 <section
-  class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-gradient-to-br from-brand-primary via-brand-primary/80 to-brand-accent/60"
+  class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-linear-to-br from-brand-primary via-brand-primary/80 to-brand-accent/60"
 >
   <!-- Floating gradient blobs -->
   <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
@@ -128,7 +128,7 @@
           class="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight mb-8 leading-[1.2] animate-[fade-in-up_0.8s_ease-out_0.2s_both]"
         >
           Websites Built for <span
-            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
+            class="text-transparent bg-clip-text bg-linear-to-r from-blue-200 to-white"
             >Profit & Scale</span
           >
         </h1>
@@ -167,25 +167,29 @@
         >
           <div class="flex flex-col">
             <span class="text-3xl font-bold text-white mb-1">99.9%</span>
-            <span class="text-xs text-blue-200 uppercase tracking-wider font-semibold"
+            <span
+              class="text-xs text-blue-200 uppercase tracking-wider font-semibold"
               >Uptime</span
             >
           </div>
           <div class="flex flex-col">
             <span class="text-3xl font-bold text-white mb-1">&lt;1s</span>
-            <span class="text-xs text-blue-200 uppercase tracking-wider font-semibold"
+            <span
+              class="text-xs text-blue-200 uppercase tracking-wider font-semibold"
               >Load Time</span
             >
           </div>
           <div class="flex flex-col">
             <span class="text-3xl font-bold text-white mb-1">250+</span>
-            <span class="text-xs text-blue-200 uppercase tracking-wider font-semibold"
+            <span
+              class="text-xs text-blue-200 uppercase tracking-wider font-semibold"
               >Builder Stores</span
             >
           </div>
           <div class="flex flex-col">
             <span class="text-3xl font-bold text-white mb-1">45%</span>
-            <span class="text-xs text-blue-200 uppercase tracking-wider font-semibold"
+            <span
+              class="text-xs text-blue-200 uppercase tracking-wider font-semibold"
               >Avg CRO Lift</span
             >
           </div>
@@ -207,11 +211,12 @@
             <div
               class="w-full h-8 bg-brand-primary rounded mb-8 flex items-center px-4"
             >
-              <span class="text-[10px] text-white font-bold tracking-widest uppercase"
+              <span
+                class="text-[10px] text-white font-bold tracking-widest uppercase"
                 >Performance: 100/100</span
               >
             </div>
-            
+
             <div class="grid grid-cols-2 gap-4 mb-4">
               <div
                 class="h-24 bg-base-100 rounded shadow-sm border border-base-300 p-3 flex flex-col justify-end"
@@ -222,7 +227,9 @@
               <div
                 class="h-24 bg-base-100 rounded shadow-sm border border-base-300 p-3 flex flex-col justify-end"
               >
-                <div class="w-8 h-8 rounded-full bg-brand-highlight/20 mb-2"></div>
+                <div
+                  class="w-8 h-8 rounded-full bg-brand-highlight/20 mb-2"
+                ></div>
                 <div class="w-full h-2 bg-base-300 rounded"></div>
               </div>
             </div>
@@ -236,7 +243,9 @@
 
         <!-- Floating Cards -->
         <div class="absolute -right-12 top-20 z-30 animate-float-delayed">
-          <div class="card bg-base-100 shadow-xl border border-base-200 p-4 rounded-xl flex items-center gap-3">
+          <div
+            class="card bg-base-100 shadow-xl border border-base-200 p-4 rounded-xl flex items-center gap-3"
+          >
             <div class="p-2 bg-green-100 text-green-600 rounded-lg">
               <Zap size={24} />
             </div>
@@ -247,8 +256,13 @@
           </div>
         </div>
 
-        <div class="absolute -left-10 bottom-24 z-30 animate-float" style="animation-delay: 1.5s;">
-          <div class="card bg-brand-highlight text-white shadow-lg p-4 rounded-xl flex items-center gap-3 transform -rotate-3">
+        <div
+          class="absolute -left-10 bottom-24 z-30 animate-float"
+          style="animation-delay: 1.5s;"
+        >
+          <div
+            class="card bg-brand-highlight text-white shadow-lg p-4 rounded-xl flex items-center gap-3 transform -rotate-3"
+          >
             <ShieldCheck size={28} />
             <div>
               <p class="text-sm font-bold">Secure Build</p>
@@ -308,43 +322,54 @@
   <div class="container mx-auto px-4 max-w-7xl relative z-10">
     <div class="flex flex-col lg:flex-row gap-16 items-center">
       <div class="lg:w-1/2 reveal" use:inview>
-        <h2 class="text-brand-highlight font-bold uppercase tracking-widest text-sm mb-4">
+        <h2
+          class="text-brand-highlight font-bold uppercase tracking-widest text-sm mb-4"
+        >
           Tech Stack
         </h2>
         <h3 class="text-4xl md:text-5xl font-black mb-8 leading-tight">
-            Engineered for <br/> <span class="text-brand-highlight">Sub-Second</span> Load Times
+          Engineered for <br />
+          <span class="text-brand-highlight">Sub-Second</span> Load Times
         </h3>
         <p class="text-xl text-blue-100/70 mb-10">
-            Speed isn't just a metric; it's a direct driver of conversion and SEO ranking. Our headless approach ensures your site remains lightning-fast regardless of content volume.
+          Speed isn't just a metric; it's a direct driver of conversion and SEO
+          ranking. Our headless approach ensures your site remains
+          lightning-fast regardless of content volume.
         </p>
         <div class="grid grid-cols-2 gap-6">
-            <div class="flex items-center gap-3">
-                <ShieldCheck class="text-brand-highlight" />
-                <span class="font-medium">SEO Optimized</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <ShieldCheck class="text-brand-highlight" />
-                <span class="font-medium">Accessibility (A11y)</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <ShieldCheck class="text-brand-highlight" />
-                <span class="font-medium">Security-First Build</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <ShieldCheck class="text-brand-highlight" />
-                <span class="font-medium">API-First Data</span>
-            </div>
+          <div class="flex items-center gap-3">
+            <ShieldCheck class="text-brand-highlight" />
+            <span class="font-medium">SEO Optimized</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <ShieldCheck class="text-brand-highlight" />
+            <span class="font-medium">Accessibility (A11y)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <ShieldCheck class="text-brand-highlight" />
+            <span class="font-medium">Security-First Build</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <ShieldCheck class="text-brand-highlight" />
+            <span class="font-medium">API-First Data</span>
+          </div>
         </div>
       </div>
       <div class="lg:w-1/2 grid grid-cols-1 gap-6 reveal" use:inview>
         {#each techStack as stack}
-          <div class="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl">
-            <h4 class="text-brand-highlight font-bold uppercase tracking-widest text-xs mb-4">
+          <div
+            class="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl"
+          >
+            <h4
+              class="text-brand-highlight font-bold uppercase tracking-widest text-xs mb-4"
+            >
               {stack.category}
             </h4>
             <div class="flex flex-wrap gap-3">
               {#each stack.tools as tool}
-                <span class="px-3 py-1 bg-white/10 rounded-lg text-sm border border-white/5 hover:bg-white/20 transition-colors pointer-events-none">
+                <span
+                  class="px-3 py-1 bg-white/10 rounded-lg text-sm border border-white/5 hover:bg-white/20 transition-colors pointer-events-none"
+                >
                   {tool}
                 </span>
               {/each}
@@ -358,31 +383,45 @@
 
 <!-- Our Process -->
 <section class="py-24 bg-base-100">
-    <div class="container mx-auto px-4 max-w-7xl">
-        <div class="text-center mb-20 reveal" use:inview>
-            <h2 class="text-brand-accent font-bold uppercase tracking-widest text-sm mb-4">Roadmap</h2>
-            <h3 class="text-3xl md:text-5xl font-bold">Our Development Process</h3>
-        </div>
-
-        <div class="relative">
-            <!-- Timeline Line -->
-            <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-base-300 -translate-y-1/2 hidden lg:block"></div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                {#each process as item, i}
-                <div class="relative reveal" use:inview style="transition-delay: {i * 100}ms">
-                    <div class="bg-base-100 relative z-10">
-                        <div class="w-16 h-16 rounded-full bg-brand-primary text-white flex items-center justify-center text-xl font-bold mb-6 ring-8 ring-base-100">
-                            {item.step}
-                        </div>
-                        <h4 class="text-xl font-bold mb-3">{item.title}</h4>
-                        <p class="text-base-content/60 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                </div>
-                {/each}
-            </div>
-        </div>
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="text-center mb-20 reveal" use:inview>
+      <h2
+        class="text-brand-accent font-bold uppercase tracking-widest text-sm mb-4"
+      >
+        Roadmap
+      </h2>
+      <h3 class="text-3xl md:text-5xl font-bold">Our Development Process</h3>
     </div>
+
+    <div class="relative">
+      <!-- Timeline Line -->
+      <div
+        class="absolute top-1/2 left-0 right-0 h-0.5 bg-base-300 -translate-y-1/2 hidden lg:block"
+      ></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        {#each process as item, i}
+          <div
+            class="relative reveal"
+            use:inview
+            style="transition-delay: {i * 100}ms"
+          >
+            <div class="bg-base-100 relative z-10">
+              <div
+                class="w-16 h-16 rounded-full bg-brand-primary text-white flex items-center justify-center text-xl font-bold mb-6 ring-8 ring-base-100"
+              >
+                {item.step}
+              </div>
+              <h4 class="text-xl font-bold mb-3">{item.title}</h4>
+              <p class="text-base-content/60 text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          </div>
+        {/each}
+      </div>
+    </div>
+  </div>
 </section>
 
 <CTABanner />
@@ -432,11 +471,6 @@
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
   }
 
   .perspective-1000 {
