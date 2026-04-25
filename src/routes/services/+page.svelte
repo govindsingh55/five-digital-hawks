@@ -11,11 +11,11 @@
   } from "@lucide/svelte";
   import { inview } from "$lib/actions/inview";
   import CTABanner from "$lib/components/CTABanner.svelte";
+  import Services from "$lib/components/Services.svelte";
 
   const services = [
     {
       title: "Email Marketing",
-      slug: "email-marketing",
       description:
         "From welcome flows to win-back sequences, we design and deploy email automations that nurture subscribers into loyal customers. Our campaigns average 35%+ open rates.",
       icon: Mail,
@@ -28,7 +28,6 @@
     },
     {
       title: "SMS Marketing",
-      slug: "sms-marketing",
       description:
         "Direct, personal, and high-converting. Our SMS campaigns reach customers where they're most engaged — their phones. Average 98% open rates.",
       icon: MessageSquare,
@@ -41,7 +40,6 @@
     },
     {
       title: "Push Marketing",
-      slug: "push-marketing",
       description:
         "Reach your audience instantly with high-impact browser and mobile notifications. Perfect for time-sensitive offers and re-engagement.",
       icon: Bell,
@@ -54,7 +52,6 @@
     },
     {
       title: "Lifecycle Management",
-      slug: "lifecycle-management",
       description:
         "Strategic orchestration of the entire customer journey. We map every touchpoint to maximize retention and lifetime value.",
       icon: Users,
@@ -67,7 +64,6 @@
     },
     {
       title: "CRM Management",
-      slug: "crm-management",
       description:
         "Data-driven customer relationship management. We clean, segment, and leverage your data to build stronger customer bonds.",
       icon: Settings,
@@ -220,43 +216,11 @@
 </section>
 
 <!-- Expanded Service Cards -->
-<section class="py-24 bg-base-100">
-  <div class="container mx-auto px-4 max-w-7xl">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {#each services as svc, i}
-        <a
-          href="/services/{svc.slug}"
-          class="card bg-base-100 card-premium border border-base-200/50 group reveal hover:border-brand-accent transition-all duration-300"
-          use:inview
-        >
-          <div
-            class="card-body items-center text-center md:items-start md:text-left"
-          >
-            <div
-              class="w-14 h-14 rounded-2xl bg-brand-primary/5 text-brand-primary flex items-center justify-center mb-4 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 mx-auto md:mx-0"
-            >
-              <svc.icon size={28} strokeWidth={1.5} />
-            </div>
-            <h3 class="card-title text-xl mb-2">{svc.title}</h3>
-            <p class="text-base-content/70 text-sm mb-4">
-              {svc.description}
-            </p>
-            <ul class="flex flex-col gap-2">
-              {#each svc.features as feat}
-                <li
-                  class="flex items-center gap-2 text-sm text-base-content/60"
-                >
-                  <Check size={16} class="text-brand-accent shrink-0" />
-                  {feat}
-                </li>
-              {/each}
-            </ul>
-          </div>
-        </a>
-      {/each}
-    </div>
-  </div>
-</section>
+<Services
+  items={services}
+  background="bg-base-100"
+  showTitle={false}
+/>
 
 <!-- Pricing -->
 <section class="py-24 bg-base-200">
