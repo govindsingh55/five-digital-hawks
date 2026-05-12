@@ -12,6 +12,7 @@
   import { inview } from "$lib/actions/inview";
   import CTABanner from "$lib/components/CTABanner.svelte";
   import Services from "$lib/components/Services.svelte";
+  import SEO from "$lib/components/SEO.svelte";
 
   const services = [
     {
@@ -179,13 +180,11 @@
   }
 </script>
 
-<svelte:head>
-  <title>Services | Five Digital Hawks</title>
-  <meta
-    name="description"
-    content="Strategic lifecycle and retention marketing services including email, SMS, push, and CRM management."
-  />
-</svelte:head>
+<SEO 
+    title="Lifecycle Marketing Services" 
+    description="Strategic lifecycle and retention marketing services including email, SMS, push, and CRM management."
+    keywords={["email marketing services", "SMS marketing automation", "retention marketing strategy", "lifecycle management", "CRM optimization"]}
+/>
 
 <!-- Page Hero -->
 <section

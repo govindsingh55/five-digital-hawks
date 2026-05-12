@@ -1,4 +1,5 @@
 <script lang="ts">
+    import SEO from "$lib/components/SEO.svelte";
     import Hero from "$lib/components/Hero.svelte";
     import TrustedBy from "$lib/components/TrustedBy.svelte";
     import Services from "$lib/components/Services.svelte";
@@ -9,13 +10,11 @@
     import CTABanner from "$lib/components/CTABanner.svelte";
 </script>
 
-<svelte:head>
-    <title>Five Digital Hawks | Marketing to Fly High</title>
-    <meta
-        name="description"
-        content="We architect data-driven Email, SMS, & 360° marketing systems that transform your traffic into loyal, high-LTV customers."
-    />
-</svelte:head>
+<SEO 
+    title="Marketing to Fly High" 
+    description="We architect data-driven Email, SMS, & 360° marketing systems that transform your traffic into loyal, high-LTV customers."
+    keywords={["email marketing", "sms marketing", "data-driven marketing", "marketing systems", "LTV optimization"]}
+/>
 
 <Hero />
 <TrustedBy />

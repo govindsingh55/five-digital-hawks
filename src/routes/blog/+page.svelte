@@ -2,14 +2,16 @@
 	import type { PageData } from './$types';
 	import { ArrowRight, Calendar, User, Tag } from '@lucide/svelte';
 	import { inview } from '$lib/actions/inview';
+	import SEO from '$lib/components/SEO.svelte';
 
 	let { data }: { data: PageData } = $props();
 </script>
 
-<svelte:head>
-	<title>Blog | Five Digital Hawks</title>
-	<meta name="description" content="Stay updated with the latest trends in digital marketing and web development." />
-</svelte:head>
+<SEO 
+	title="Blog" 
+	description="Stay updated with the latest trends in digital marketing and web development."
+	keywords={["digital marketing blog", "marketing trends 2026", "email marketing insights", "SMS marketing tips"]}
+/>
 
 <div class="pt-32 pb-20 min-h-screen bg-base-200/30">
 	<div class="container mx-auto px-4 max-w-7xl">

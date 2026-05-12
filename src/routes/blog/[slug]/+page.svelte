@@ -1,14 +1,42 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { Calendar, User, ArrowLeft, Clock } from '@lucide/svelte';
+	import SEO from '$lib/components/SEO.svelte';
 
 	let { data }: { data: PageData } = $props();
+
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": data.meta.title,
+		"image": data.meta.image,
+		"datePublished": data.meta.date,
+		"author": {
+			"@type": "Person",
+			"name": data.meta.author || "Five Digital Hawks"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "Five Digital Hawks",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://fivedigitalhawks.com/logo.png"
+			}
+		},
+		"description": data.meta.description
+	};
 </script>
 
-<svelte:head>
-	<title>{data.meta.title} | Five Digital Hawks</title>
-	<meta name="description" content={data.meta.description} />
-</svelte:head>
+<SEO 
+	title={data.meta.title} 
+	description={data.meta.description}
+	image={data.meta.image}
+	type="article"
+	author={data.meta.author}
+	publishedDate={data.meta.date}
+	keywords={data.meta.categories}
+	{jsonLd}
+/>
 
 <article class="pt-32 pb-20 min-h-screen">
 	<div class="container mx-auto px-4 max-w-4xl">

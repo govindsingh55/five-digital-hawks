@@ -6,7 +6,10 @@
     Mail,
     MapPin,
     Phone,
+    Instagram,
+    Facebook,
   } from "@lucide/svelte";
+  import { siteConfig } from "$lib/config";
 </script>
 
 <footer
@@ -29,25 +32,40 @@
         </p>
         <div class="flex gap-4">
           <a
-            href="/"
+            href={siteConfig.links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-circle btn-sm btn-ghost hover:bg-brand-primary hover:text-white transition-colors"
             aria-label="LinkedIn"
           >
             <Linkedin size={18} />
           </a>
           <a
-            href="/"
+            href={siteConfig.links.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-circle btn-sm btn-ghost hover:bg-brand-primary hover:text-white transition-colors"
             aria-label="Twitter"
           >
             <Twitter size={18} />
           </a>
           <a
-            href="/"
+            href={siteConfig.links.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-circle btn-sm btn-ghost hover:bg-brand-primary hover:text-white transition-colors"
-            aria-label="GitHub"
+            aria-label="Facebook"
           >
-            <Github size={18} />
+            <Facebook size={18} />
+          </a>
+          <a
+            href={siteConfig.links.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-circle btn-sm btn-ghost hover:bg-brand-primary hover:text-white transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram size={18} />
           </a>
         </div>
       </div>
@@ -163,9 +181,9 @@
           <li class="flex items-center gap-3 text-base-content/70">
             <Mail size={20} class="text-brand-accent shrink-0" />
             <a
-              href="mailto:marketing@fivedigitalhawks.com"
+              href="mailto:hello@fivedigitalhawks.com"
               class="hover:text-brand-accent transition-colors"
-              >marketing@fivedigitalhawks.com</a
+              >hello@fivedigitalhawks.com</a
             >
           </li>
         </ul>
