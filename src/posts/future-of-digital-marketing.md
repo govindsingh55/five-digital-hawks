@@ -12,9 +12,6 @@ published: true
   import ConsultationButton from "$lib/components/ConsultationButton.svelte";
 </script>
 
-# The Future of Digital Marketing in 2026
-
-
 Digital marketing is evolving faster than ever. As we move through 2026, the integration of AI and machine learning is no longer a luxury—it is the foundational layer for any successful business. At **Five Digital Hawks**, we've identified the key shifts that are defining this new era.
 
 ## The AI Revolution: Beyond Automation

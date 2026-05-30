@@ -12,9 +12,6 @@ published: true
   import ConsultationButton from "$lib/components/ConsultationButton.svelte";
 </script>
 
-# The Power of High-Performance Web Apps
-
-
 In 2026, web performance is no longer just about user satisfaction—it's a critical component of search engine rankings and conversion rates. At **Five Digital Hawks**, we prioritize speed from the first line of code.
 
 ## Speed is Key: The Core Web Vitals Era
